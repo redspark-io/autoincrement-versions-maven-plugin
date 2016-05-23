@@ -390,6 +390,13 @@
         </configuration>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.springframework.build</groupId>
+        <artifactId>aws-maven</artifactId>
+        <version>5.0.0.RELEASE</version>
+      </extension>
+    </extensions>
   </build>
 
   <reporting>
@@ -475,4 +482,14 @@
       </reporting>
     </profile>
   </profiles>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>maven.holmesdoc.com</id>
+      <url>s3://maven.holmesdoc.com</url>
+    </snapshotRepository>
+    <repository>
+      <id>maven.holmesdoc.com</id>
+      <url>s3://maven.holmesdoc.com</url>
+    </repository>
+  </distributionManagement>
 </project>
